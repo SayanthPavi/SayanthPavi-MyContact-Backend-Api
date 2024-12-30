@@ -5,7 +5,7 @@ const errorHandler = (err, req, res, next) => {
   switch (statusCode) {
     case contants.VALIDATION_ERROR:
       res.json({
-        title: " Validation Failed",
+        title: "Validation Failed",
         message: err.message,
         stackTrace: err.stack,
       });
@@ -41,7 +41,6 @@ const errorHandler = (err, req, res, next) => {
 
     default:
       console.log("No Error, All good !");
-
       break;
   }
 };
